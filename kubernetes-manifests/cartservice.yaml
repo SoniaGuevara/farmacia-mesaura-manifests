@@ -19,6 +19,7 @@ metadata:
   labels:
     app: cartservice
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: cartservice
@@ -50,12 +51,12 @@ spec:
         - name: REDIS_ADDR
           value: "redis-cart:6379"
         resources:
-          requests:
-            cpu: 200m
-            memory: 64Mi
-          limits:
-            cpu: 300m
-            memory: 128Mi
+          requests: # <-- Reducidos para cartservice
+            cpu: 30m   # Antes 200m, ahora 30m
+            memory: 40Mi # Antes 64Mi, ahora 40Mi
+          limits:   # <-- Reducidos para cartservice
+            cpu: 50m   # Antes 300m, ahora 50m
+            memory: 60Mi # Antes 128Mi, ahora 60Mi
         readinessProbe:
           initialDelaySeconds: 15
           grpc:
