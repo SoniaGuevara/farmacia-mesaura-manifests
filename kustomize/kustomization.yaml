@@ -20,3 +20,5 @@ images:
 - name: '*/*'
 - digest: e3972be0836f65d0fd6e05afcaecc51c2f0cd201
   name: us-central1-docker.pkg.dev/farmacia-cicd-final/farmacia-repo/*
+- digest: 6807b9d128b62a4f536d8418629452e1ad899ab7
+  name: us-central1-docker.pkg.dev/farmacia-devops-463517/farmacia-repo/*
